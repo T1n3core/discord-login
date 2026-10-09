@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html {
+    min-height: 100%;
+    background: #170747;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -12,6 +17,10 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("../assets/discord_background.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   color: #f2f3f5;
 }
