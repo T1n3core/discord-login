@@ -1,288 +1,125 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 30px 16px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../assets/discord_background.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    color: #f2f3f5;
-}
-
 .register-card {
-    width: 480px;
-    max-width: 100%;
-
-    background: #232428;
-    border-radius: 8px;
-
-    padding: 32px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.register-section {
-    width: 100%;
+	width: 480px;
+	max-width: 100%;
+	padding: 32px;
 }
 
 .register-section h1 {
-    text-align: center;
-    font-size: 23px;
-    font-weight: 700;
-
-    margin-bottom: 24px;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
-
-form {
-    width: 100%;
-}
-
-form > label:not(.checkbox-row) {
-    display: block;
-    margin-bottom: 8px;
-
-    font-size: 14px;
-    font-weight: 600;
-    color: #f2f3f5;
-}
-
-form > label span {
-    color: #ed4245;
-}
-
-form > input {
-    display: block;
-    width: 100%;
-    height: 40px;
-
-    padding: 0 12px;
-    margin-bottom: 23px;
-
-    border: 1px solid #3f4147;
-    border-radius: 8px;
-
-    background: #1e1f22;
-    color: #fff;
-
-    font-family: inherit;
-    font-size: 14px;
-
-    outline: none;
-
-    transition: border-color 0.15s ease,
-                box-shadow 0.15s ease;
-}
-
-form > input:focus {
-    border-color: #5865f2;
-    box-shadow: 0 0 0 1px #5865f2;
-}
-
-/* Date of birth */
 
 .date-of-birth {
-    display: flex;
-    gap: 10px;
-
-    width: 100%;
-    margin-bottom: 23px;
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	margin-bottom: 20px;
 }
 
 .date-of-birth select {
-    min-width: 0;
-    flex: 1;
-
-    height: 40px;
-    padding: 0 12px;
-
-    border: 1px solid #3f4147;
-    border-radius: 8px;
-
-    background-color: #1e1f22;
-    color: #f2f3f5;
-
-    font-family: inherit;
-    font-size: 14px;
-
-    cursor: pointer;
-    outline: none;
+	min-width: 0;
+	flex: 1;
+	cursor: pointer;
 }
 
 .date-of-birth select:first-child {
-    flex: 1.15;
-}
-
-.date-of-birth select:focus {
-    border-color: #5865f2;
+	flex: 1.15;
 }
 
 .date-of-birth select:invalid {
-    color: #949ba4;
+	color: #949ba4;
 }
 
-/* Checkboxes */
-
 .checkbox-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-
-    margin-bottom: 9px;
-
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-
-    color: #b5bac1;
-    cursor: pointer;
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #b5bac1;
+	cursor: pointer;
 }
 
 .checkbox-row input[type="checkbox"] {
-    flex: 0 0 20px;
-
-    width: 20px;
-    height: 20px;
-
-    margin: 0;
-
-    appearance: none;
-    -webkit-appearance: none;
-
-    border: 1px solid #72767d;
-    border-radius: 4px;
-
-    background: #232428;
-
-    cursor: pointer;
+	flex: 0 0 24px;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 1px solid #80848e;
+	border-radius: 6px;
+	background: #1e1f22;
+	cursor: pointer;
 }
 
 .checkbox-row input[type="checkbox"]:checked {
-    background-color: #5865f2;
-    border-color: #5865f2;
+	background: #5865f2;
+	border-color: #5865f2;
 }
 
 .checkbox-row input[type="checkbox"]:checked::after {
-    content: "✓";
-    display: block;
-
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 18px;
+	content: "✓";
+	display: block;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 22px;
 }
 
 .checkbox-row input[type="checkbox"]:focus-visible {
-    outline: 2px solid #5865f2;
-    outline-offset: 2px;
+	outline: 2px solid #5865f2;
+	outline-offset: 2px;
 }
 
 .checkbox-text {
-    flex: 1;
-    min-width: 0;
+	flex: 1;
+	min-width: 0;
+	color: #b5bac1;
 }
 
 .checkbox-text a {
-    color: #00a8fc;
-    text-decoration: none;
-}
-
-.checkbox-text a:hover {
-    text-decoration: underline;
+	color: #00a8fc;
 }
 
 .terms-row {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
-
-/* Create account button */
-
-button {
-    display: block;
-    width: 100%;
-    height: 40px;
-
-    border: none;
-    border-radius: 7px;
-
-    background: #5865f2;
-    color: white;
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-
-    cursor: pointer;
-
-    transition: background 0.15s ease;
-}
-
-button:hover {
-    background: #4752c4;
-}
-
-button:active {
-    transform: translateY(1px);
-}
-
-/* Login link */
 
 .login-link {
-    margin-top: 22px;
-
-    font-size: 12px;
-    line-height: 18px;
+	margin-top: 20px;
+	font-size: 14px;
 }
 
 .login-link a {
-    color: #5865f2;
-    text-decoration: none;
+	color: #00a8fc;
 }
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive layout */
 
 @media (max-width: 480px) {
-    body {
-        padding: 16px;
-        align-items: flex-start;
-    }
+	body {
+		padding: 16px;
+		align-items: flex-start;
+	}
 
-    .register-card {
-        padding: 24px 20px;
-    }
+	.register-card {
+		padding: 24px 20px;
+	}
 
-    .register-section h1 {
-        font-size: 22px;
-        margin-bottom: 24px;
-    }
+	.date-of-birth {
+		gap: 8px;
+	}
 
-    .date-of-birth {
-        gap: 7px;
-    }
+	.date-of-birth select {
+		padding: 0 8px;
+		font-size: 13px;
+	}
 
-    .date-of-birth select {
-        padding: 0 7px;
-        font-size: 13px;
-    }
-
-    .checkbox-row {
-        font-size: 13px;
-        line-height: 19px;
-    }
+	.checkbox-row {
+		font-size: 13px;
+		line-height: 19px;
+	}
 }
