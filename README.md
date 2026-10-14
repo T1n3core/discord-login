@@ -1,5 +1,7 @@
 # Discord Login & Registration UI Recreation
 
+**[View Login Page](https://t1n3core.github.io/discord-login/login.html)** · [View Registration Page](https://t1n3core.github.io/discord-login/registration.html)
+
 A school exercise recreating the visual design of Discord's login and registration pages.
 
 ## About
