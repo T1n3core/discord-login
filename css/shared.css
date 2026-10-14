@@ -15,7 +15,7 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "gg sans", sans-serif;
 	background: #170747 url("../assets/discord_background.svg") center / cover no-repeat;
 	color: #f2f3f5;
 }
@@ -45,7 +45,7 @@ label {
 	display: block;
 	margin-bottom: 8px;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	color: #f2f3f5;
 }
 
@@ -110,6 +110,16 @@ a:hover {
 	text-decoration: underline;
 }
 
+.discord-logo {
+	position: fixed;
+	top: 24px;
+	left: 24px;
+	width: 124px;
+	height: auto;
+	object-fit: contain;
+	z-index: 1000;
+}
+
 @keyframes page-enter {
 	from {
 		opacity: 0;
@@ -130,8 +140,41 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	main,
 	body.is-leaving main {
 		animation: none;
+	}
+
+	@font-face {
+		font-family: "gg sans";
+		src: url("../fonts/gg_sans_Regular.ttf") format("truetype");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "gg sans";
+		src: url("../fonts/gg_sans_Medium.ttf") format("truetype");
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "gg sans";
+		src: url("../fonts/gg_sans_Semibold.ttf") format("truetype");
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "gg sans";
+		src: url("../fonts/gg_sans_Bold.ttf") format("truetype");
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
 	}
 }
