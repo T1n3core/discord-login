@@ -43,14 +43,18 @@ document.querySelectorAll("[data-demo-form]").forEach((form) => {
 	});
 });
 
-// Demo-only links: legal policies and passkey authentication.
+// Demo-only links: password recovery, legal policies and passkey authentication.
 document.querySelectorAll('a[href="#"]').forEach((link) => {
 	const text = link.textContent.trim().toLowerCase();
 
 	let title;
 	let message;
+	let html;
 
-	if (text === "terms of service") {
+	if (text === "forgot your password?") {
+		title = "Demo Credentials";
+		html = "Username: <b>discord</b><br>Password: <b>discord</b>";
+	} else if (text === "terms of service") {
 		title = "Terms of Service";
 		message =
 			"This is a school project for visual demonstration only. These are not real Terms of Service and do not constitute a legal agreement.";
@@ -76,7 +80,7 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
 			...demoAlert,
 			icon: "info",
 			title,
-			text: message,
+			...(html ? { html } : { text: message }),
 		});
 	});
 });
